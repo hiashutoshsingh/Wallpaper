@@ -4,5 +4,5 @@ data class ImageListResponse(
 
     @SerializedName("total") val total: Int,
     @SerializedName("totalHits") val totalHits: Int,
-    @SerializedName("hits") val hits: List<ImageResponse>
+    @SerializedName("hits") val imageList: List<ImageResponse>
 )

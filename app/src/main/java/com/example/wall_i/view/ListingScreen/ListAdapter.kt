@@ -14,7 +14,7 @@ class ListAdapter(var items:ArrayList<ListDataModel>,var click:onItemClick): Rec
 
     class ListViewHolder(view: View):RecyclerView.ViewHolder(view){
         var mImage=view.Images
-        var mImagesName=view.ImageNames
+
 
         fun bind(model:ListDataModel,DataClick:onItemClick){
             var requestoptions= RequestOptions()
@@ -25,7 +25,6 @@ class ListAdapter(var items:ArrayList<ListDataModel>,var click:onItemClick): Rec
                 .load(model.img)
                 .into(mImage)
 
-            mImagesName.setText(model.img_name)
 
 
         }
