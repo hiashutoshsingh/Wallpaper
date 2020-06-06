@@ -1,11 +1,10 @@
 package com.example.wall_i.view.ListingScreen
 
 import android.content.Intent
-import android.icu.lang.UCharacter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.wall_i.Data.DataSource
+import com.example.wall_i.data.DataSource
 import com.example.wall_i.R
 import com.example.wall_i.model.ListDataModel
 import kotlinx.android.synthetic.main.activity_result_listing_screen.*
