@@ -26,6 +26,10 @@ class ListAdapter(var items:ArrayList<ListDataModel>,var click:onItemClick): Rec
                 .applyDefaultRequestOptions(requestoptions)
                 .load(model.img)
                 .into(mImage)
+            itemView.setOnClickListener {
+                DataClick.onclick(model,absoluteAdapterPosition)
+
+            }
 
 
 

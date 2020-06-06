@@ -2,6 +2,7 @@ package com.example.wall_i.view.ListingScreen
 
 import ImageListResponse
 import ImageResponse
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -11,6 +12,7 @@ import com.example.wall_i.R
 import com.example.wall_i.data.api.ServiceBuilder
 import com.example.wall_i.model.ListDataModel
 import com.example.wall_i.utils.Constants
+import com.example.wall_i.view.PreviewScreen.Preview
 import kotlinx.android.synthetic.main.activity_result_listing_screen.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -59,12 +61,11 @@ class ResultListingScreen : AppCompatActivity(),onItemClick {
 
         }
     override fun onclick(data: ListDataModel, I: Int) {
-        /* var intent= Intent(this,SingleImageActivty::class.java)
+         var intent= Intent(this,Preview::class.java)
          intent.putExtra("image",data.img)
-         intent.putExtra("Desc",data.img_name)
          startActivity(intent)
 
-         */
+
 
     }
 
