@@ -1,19 +1,20 @@
 package com.example.wall_i.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wall_i.R
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_search.*
 
 class SearchActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_search)
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
 
         searchEditText?.setOnEditorActionListener { _, actionId, _ ->
@@ -39,9 +40,8 @@ class SearchActivity : AppCompatActivity() {
     }
 
     private fun openActivity(searchedText: String) {
-        //todo
-        //val intent = Intent(this, ProfileActivity::class.java)
-        // intent.putExtra("Username", "John Doe")
-        // startActivity(intent)
+        val intent = Intent(this, HomeActivity::class.java)
+        intent.putExtra("image", searchedText)
+        startActivity(intent)
     }
 }

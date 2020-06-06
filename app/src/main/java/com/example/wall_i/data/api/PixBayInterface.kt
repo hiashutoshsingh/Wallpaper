@@ -7,7 +7,7 @@ import retrofit2.http.Query
 
 interface PixBayInterface {
 
-    @GET("/")
-    fun getAllImages(@Query("value") query: String): Call<ImageListResponse>
+    @GET("api/")
+    fun getAllImages(@Query("key") key: String, @Query("q") q: String): Call<ImageListResponse>
 
 }
