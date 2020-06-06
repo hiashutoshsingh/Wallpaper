@@ -1,4 +1,4 @@
-package com.example.wall_i.Data
+package com.example.wall_i.data
 
 import com.example.wall_i.model.ListDataModel
 
