@@ -7,6 +7,7 @@ import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wall_i.R
+import com.example.wall_i.view.ListingScreen.ResultListingScreen
 import kotlinx.android.synthetic.main.activity_search.*
 
 class SearchActivity : AppCompatActivity() {
@@ -40,7 +41,7 @@ class SearchActivity : AppCompatActivity() {
     }
 
     private fun openActivity(searchedText: String) {
-        val intent = Intent(this, HomeActivity::class.java)
+        val intent = Intent(this, ResultListingScreen::class.java)
         intent.putExtra("image", searchedText)
         startActivity(intent)
     }
