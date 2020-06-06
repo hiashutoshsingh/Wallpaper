@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:windowSoftInputMode="adjustPan|adjustResize"
         android:theme="@style/AppTheme">
-        <activity android:name=".SearchActivity">
+        <activity android:name=".view.SearchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
