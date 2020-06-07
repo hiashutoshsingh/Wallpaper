@@ -26,5 +26,6 @@ class Preview : AppCompatActivity() {
 
     fun favbuttonClicked(view: View) {
         favorite.setImageResource(R.drawable.ic_favorite_black_24dp)
+        //add the image into database
     }
 }

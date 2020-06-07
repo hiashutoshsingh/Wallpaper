@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ListingScreen.ResultListingScreen">
+    tools:context=".view.favoriteScreen.FavoriteScreen">
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/ListRecyclerView"/>
+        android:id="@+id/FavRecyclerView"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
