@@ -2,6 +2,7 @@ package com.example.wall_i.view.PreviewScreen
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.wall_i.R
@@ -20,5 +21,10 @@ class Preview : AppCompatActivity() {
             .applyDefaultRequestOptions(requestoptions)
             .load(intent.getStringExtra("image"))
             .into(preview)
+
+    }
+
+    fun favbuttonClicked(view: View) {
+        favorite.setImageResource(R.drawable.ic_favorite_black_24dp)
     }
 }

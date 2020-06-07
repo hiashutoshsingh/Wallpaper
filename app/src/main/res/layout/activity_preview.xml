@@ -26,8 +26,19 @@
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:id="@+id/favorite"
+            android:background="#ffffff"
+            android:layout_marginHorizontal="30dp"
+            android:clickable="true"
+            android:onClick="favbuttonClicked"
+            android:src="@drawable/ic_favorite_border_black_24dp"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:id="@+id/download"
             android:background="#ffffff"
+            android:clickable="true"
             android:layout_marginHorizontal="30dp"
             android:src="@drawable/ic_file_download_black_24dp"/>
         <ImageButton
@@ -35,6 +46,7 @@
             android:layout_height="40dp"
             android:id="@+id/share"
             android:background="#ffffff"
+            android:clickable="true"
             android:layout_marginHorizontal="30dp"
             android:src="@drawable/ic_share_black_24dp"/>
         <ImageButton
@@ -43,6 +55,7 @@
             android:background="#ffffff"
             android:layout_marginHorizontal="30dp"
             android:id="@+id/more"
+            android:clickable="true"
             android:src="@drawable/ic_more_vert_black_24dp"/>
 
 

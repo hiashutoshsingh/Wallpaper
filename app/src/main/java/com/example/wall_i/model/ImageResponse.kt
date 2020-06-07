@@ -1,7 +1,12 @@
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 data class ImageResponse(
+
     @SerializedName("id") val id: Int,
+
     @SerializedName("pageURL") val pageURL: String,
     @SerializedName("type") val type: String,
     @SerializedName("tags") val tags: String,
@@ -9,6 +14,7 @@ data class ImageResponse(
     @SerializedName("previewWidth") val previewWidth: Int,
     @SerializedName("previewHeight") val previewHeight: Int,
     @SerializedName("webformatURL") val webFormatURL: String,
+
     @SerializedName("webformatWidth") val webFormatWidth: Int,
     @SerializedName("webformatHeight") val webFormatHeight: Int,
     @SerializedName("largeImageURL") val largeImageURL: String,
