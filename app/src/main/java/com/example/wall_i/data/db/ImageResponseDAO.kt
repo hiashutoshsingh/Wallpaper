@@ -9,9 +9,9 @@ import androidx.room.Query
 interface ImageResponseDAO{
 
     @Insert
-    fun saveImg(url:ImageResponse)
+    fun saveImg(url:Entity)
 
-    @Query(value = "Select * from ImageResponse")
-    fun getImgUrl():ArrayList<ImageResponse>
+    @Query(value = "Select * from Entity")
+    fun getImgUrl():List<Entity>
 
 }
