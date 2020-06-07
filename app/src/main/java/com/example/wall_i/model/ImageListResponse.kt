@@ -1,3 +1,4 @@
+import com.example.wall_i.model.ImageResponse
 import com.google.gson.annotations.SerializedName
 
 data class ImageListResponse(
