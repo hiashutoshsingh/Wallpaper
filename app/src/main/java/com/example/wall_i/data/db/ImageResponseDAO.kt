@@ -1,6 +1,5 @@
 package com.example.wall_i.data.db
 
-import ImageResponse
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -9,9 +8,9 @@ import androidx.room.Query
 interface ImageResponseDAO{
 
     @Insert
-    fun saveImg(url:Entity)
+    fun saveImg(url:ImageEntity)
 
-    @Query(value = "Select * from Entity")
-    fun getImgUrl():List<Entity>
+    @Query(value = "Select * from ImageEntity")
+    fun getImgUrl():List<ImageEntity>
 
 }
