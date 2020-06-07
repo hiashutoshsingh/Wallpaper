@@ -20,8 +20,6 @@ import retrofit2.Response
 
 class ResultListingScreen : AppCompatActivity(),onItemClick {
     private lateinit var Ladapter: ListAdapter
-    val col=2
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result_listing_screen)
