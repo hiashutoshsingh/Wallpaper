@@ -1,7 +1,6 @@
 package com.example.wall_i.data.api
 
 import com.example.wall_i.utils.Constants
-import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
