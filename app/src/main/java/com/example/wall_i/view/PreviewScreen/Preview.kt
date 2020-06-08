@@ -9,6 +9,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
@@ -50,9 +51,8 @@ class Preview : AppCompatActivity() {
         request.setDescription("Image is being downloaded")
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
         request.setDestinationInExternalPublicDir(
-            Environment.DIRECTORY_DOWNLOADS,
-            "${System.currentTimeMillis()}"
-        )
+            Environment.DIRECTORY_DOWNLOADS,"${System.currentTimeMillis()}".plus(".jpg"))
+        Log.d("Myapp","${System.currentTimeMillis()}")
 
         val manager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
         manager.enqueue(request)
