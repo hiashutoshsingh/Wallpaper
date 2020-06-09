@@ -1,8 +1,11 @@
+@file:Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
+
 package com.example.wall_i.view.PreviewScreen
 
 import android.Manifest
 import android.app.DownloadManager
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
@@ -13,6 +16,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
+import androidx.core.net.toUri
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.wall_i.R
@@ -30,6 +34,9 @@ class Preview : AppCompatActivity() {
 
         download.setOnClickListener {
             checkPermission()
+        }
+        share.setOnClickListener {
+            onShareButtonClicked(intent.getStringExtra("image"))
         }
 
 
@@ -99,6 +106,19 @@ class Preview : AppCompatActivity() {
             startDownloading()
         }
 
+    }
+
+    fun onShareButtonClicked(link:String){
+        val shareIntent: Intent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, "Hey Check this awsome image\n".plus(link))
+            putExtra(Intent.EXTRA_STREAM, link)
+            type = "image/jpeg"
+            type="text/plain"
+            flags=Intent.FLAG_GRANT_READ_URI_PERMISSION
+
+        }
+        startActivity(Intent.createChooser(shareIntent, resources.getText(R.string.share)))
     }
 
 
