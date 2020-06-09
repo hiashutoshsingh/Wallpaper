@@ -1,11 +1,12 @@
 package com.example.wall_i.view.ListingScreen
 
 import ImageListResponse
-import ImageResponse
+import com.example.wall_i.model.ImageResponse
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.wall_i.data.DataSource
 import com.example.wall_i.R
@@ -23,6 +24,9 @@ class ResultListingScreen : AppCompatActivity(),onItemClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result_listing_screen)
+        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
+        supportActionBar?.setCustomView(R.layout.custom_toolbar)
+
         val imageSearched = intent.getStringExtra("image")!!
 
         val request = ServiceBuilder.invoke()
@@ -42,8 +46,8 @@ class ResultListingScreen : AppCompatActivity(),onItemClick {
                     ).show()
                     ListRecyclerView.apply {
                         layoutManager = StaggeredGridLayoutManager(2, 1)
-                        var Data = DataSource.createDataSet(initListView(response.body()!!.imageList))
-                        Ladapter = ListAdapter(Data, this@ResultListingScreen)
+                        var data = DataSource.createDataSet(initListView(response.body()!!.imageList))
+                        Ladapter = ListAdapter(data, this@ResultListingScreen)
                         adapter = Ladapter
 
                     }

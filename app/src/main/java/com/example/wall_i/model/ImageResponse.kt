@@ -1,4 +1,4 @@
-
+package com.example.wall_i.model
 import com.google.gson.annotations.SerializedName
 
 data class ImageResponse(
